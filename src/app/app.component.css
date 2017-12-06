@@ -1,0 +1,8 @@
+.bg-navbar {
+  background-color: #BE3144;
+  box-shadow: 0px 0px 4px;
+}
+.brand-heading, .brand-heading:hover, .brand-heading:focus {
+  color: #FFF;
+  font-weight: 800;
+}

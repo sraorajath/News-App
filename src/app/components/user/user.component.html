@@ -1,0 +1,32 @@
+<section class="first-section">
+  <div class="row heading-row">
+    <div class="col-12 text-center heading-col">
+      <div class="page-heading">
+        <span class="h-text">Select News Source</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container section-two">
+  <div class="row">
+    <div class="col-sm-12">
+      <input type="text" #myInput [(ngModel)]="searchText" class="form-control search-form" placeholder="Search Source Here...." />
+    </div>
+  </div>
+</section>
+
+<section class="container section-three">
+  <div class="row">
+    <div class="col-sm-12 col-md-3" *ngFor="let source of sources | filter: searchText">
+      <div class="middle" (click)="gotoArticle(source.id)">
+        <label>
+          <input type="radio" name="radio" />
+          <div class="front-end box">
+            <span>{{source.name}}</span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>

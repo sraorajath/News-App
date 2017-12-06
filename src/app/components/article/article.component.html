@@ -1,0 +1,25 @@
+<section class="first-section">
+  <div class="row heading-row">
+    <div class="col-12 text-center heading-col">
+      <div class="page-heading">
+        <span class="h-text">Top News</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container section-two">
+  <div class="row">
+    <div class="col-sm-12 col-md-4 cols" *ngFor="let article of articles">
+      <a href="{{article.url}}" target="_blank">
+        <article class="card card-inverse animated fadeInLeft" [style.background-image]="'url('+article.urlToImage+')'" style="background-position: center center;background-size: cover;">
+          <!-- <img class="img-responsive" src="" alt="Deer in nature" /> -->
+          <div class="card-img-overlay" >
+            <h4 class="card-title bottom" style="color: #fff;font-size: 28px;font-weight: 700;">{{article.title}}</h4>
+            <span class="bottom" style="color:#fff;font-weight: 300;">{{article.description}}</span>
+          </div>
+        </article>
+      </a>
+    </div>
+  </div>
+</div>
